@@ -8,7 +8,7 @@
     "displayName": "Component Slider",
     "component": "componentSlider",
     "description": "A simple left and right slider for an component",
-    "main": "/js/componentSlider.js",
+    "main": "/js/adapt-componentSlider.js",
     "keywords": [
         "adapt-plugin",
         "adapt-component"

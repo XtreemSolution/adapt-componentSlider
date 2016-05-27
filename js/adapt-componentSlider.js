@@ -1,9 +1,9 @@
-define([
-    'coreJS/adapt',
-    'coreViews/articleView'
-], function(Adapt, AdaptArticleView) {
+define(function(require) {
 
-    var BlockSliderView = {
+    var ComponentView = require('coreViews/componentView');
+    var Adapt = require('coreJS/adapt');
+
+    var ComponentSlider = ComponentView.extend({
 
         _disableAnimationOnce: false,
         _disableAnimations: false,
@@ -470,8 +470,9 @@ define([
             this.$(".component").off("resize", this._blockSliderResizeHeight);
             this.stopListening(Adapt, "device:changed", this._onBlockSliderDeviceChanged);
         }
-    };
-
-    return BlockSliderView;
-
+        
+    });
+    
+    Adapt.register("componentSlider", ComponentSlider);
+    
 });
